@@ -9,6 +9,8 @@ My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iow
 
 - Non-destructive and destructive evaluation
 - Hardware Hacking
+- Physical Security
+- Locksport
 
 ## Experience
 
