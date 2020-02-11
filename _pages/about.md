@@ -27,3 +27,6 @@ My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iow
 - PHP
 - C
 - Java
+
+
+All opinions presented on this site are mine and not that of a former or current employer. 
