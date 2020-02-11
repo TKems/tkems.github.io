@@ -5,6 +5,11 @@ permalink: /about/
 ---
 My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iowa State University.
 
+## Contact
+You can reach me by email: trevorkems@gmail.com
+Please include your request within the subject line, thanks!
+
+
 ## Interests
 
 - Non-destructive and destructive evaluation
@@ -29,4 +34,4 @@ My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iow
 - Java
 
 
-All opinions presented on this site are mine and not that of a former or current employer. 
+All opinions presented on this site are mine and not that of a former or current employer.
