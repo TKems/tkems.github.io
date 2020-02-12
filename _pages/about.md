@@ -3,27 +3,35 @@ layout: page
 title: About
 permalink: /about/
 ---
+My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iowa State University.
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+## Contact
+You can reach me by email: trevorkems@gmail.com
+Please include your request within the subject line, thanks!
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
 
-## Features
+## Interests
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+- Non-destructive and destructive evaluation
+- Hardware Hacking
+- Physical Security
+- Locksport
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+## Experience
+
+- Windows Active Directory and Administration
+- Linux and macOS Administration
+- Drupal
+- Wordpress
+- VMWare ESXi and vSphere
+- Virtual Box and VMWare Workstation
+- HTML, CSS, JS
+
+## Languages
+
+- PHP
+- C
+- Java
+
+
+All opinions presented on this site are mine and not that of a former or current employer.
