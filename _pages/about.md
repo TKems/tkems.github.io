@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-My name is Trevor Kems and I am a Junior studying Cyber Security Engineer at Iowa State University.
+My name is Trevor Kems and I am a Junior studying Cyber Security Engineering at Iowa State University.
 
 ## Contact
 You can reach me by email: trevorkems@gmail.com
