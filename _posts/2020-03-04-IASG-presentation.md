@@ -11,7 +11,7 @@ Some of the projects listed in the presentation are not currently on my website 
 
 Slides:
 
-[https://docs.google.com/presentation/d/1jYWCZxqzzmHtuGNaBcyEppj0qsGm9e7zhW9ThNL43HU/edit?usp=sharing](IASG Slides)
+[IASG Slides](https://docs.google.com/presentation/d/1jYWCZxqzzmHtuGNaBcyEppj0qsGm9e7zhW9ThNL43HU/edit?usp=sharing)
 
 Video:
 
