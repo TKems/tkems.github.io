@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<title>Add and search using facial recognition</title>
+
+
+</head>
+
+
+<h1>Add to the Database</h1>
+<input type="text" placeholder="Full Name" id="textbox1"/><br><br>
+<input type="file" accept="image/*" onchange="addFace(this)" capture/><br>
+<br>
+<p id="response1">Output</p>
+
+<br><br>
+<h1>Search the Database</h1>
+<input type="file" accept="image/*" onchange="searchFace(this)" capture/><br>
+<br>
+<p id="response2">Output</p>
+
+<script>
+
+function addFace(element) {
+      var preformated;
+      var strImage;
+      var xhr = new XMLHttpRequest();
+      var url = "https://6fi0zvbmcl.execute-api.us-east-2.amazonaws.com/prod/add-face";
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              var json = JSON.parse(xhr.responseText);
+              console.log(json.faceID);
+              document.getElementById("response1").innerHTML = json.faceID;
+          }
+      };
+      var file = element.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function() {
+
+      preformated = reader.result;
+      strImage = preformated.replace(/^data:image\/[a-z]+;base64,/, "");
+      //console.log('RESULT', strImage);
+      var data = JSON.stringify({"imagebytes": strImage, "fullname": document.getElementById('textbox1').value});
+      xhr.send(data);
+      }
+      reader.readAsDataURL(file);
+
+}
+
+function searchFace(element) {
+      var preformated;
+      var strImage;
+      var xhr = new XMLHttpRequest();
+      var url = "https://6fi0zvbmcl.execute-api.us-east-2.amazonaws.com/prod/search-face";
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              var json = JSON.parse(xhr.responseText);
+              console.log(json.fullName);
+              document.getElementById("response2").innerHTML = json.fullName;
+          }
+      };
+      var file = element.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function() {
+
+      preformated = reader.result;
+      strImage = preformated.replace(/^data:image\/[a-z]+;base64,/, "");
+      console.log('RESULT', strImage);
+      var data = JSON.stringify({"imagebytes": strImage});
+      xhr.send(data);
+      }
+      reader.readAsDataURL(file);
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+</html>
