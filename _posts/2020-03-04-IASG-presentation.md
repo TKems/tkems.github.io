@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  IASG Presentation
-categories: [Projects,Presentations,ISU]
+categories: [Presentations,ISU]
 excerpt: I was given the privilege to give a presentation to the Iowa State Information Student Assurance Student Group!
 ---
 
@@ -15,4 +15,4 @@ Slides:
 
 Video:
 
-Pending editing and release.
+[IASG Presentation Video (YouTube)](https://www.youtube.com/watch?v=r7A0l4D0ADY)
