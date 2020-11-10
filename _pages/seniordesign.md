@@ -4,7 +4,7 @@ title: Senior Design
 permalink: /seniordesign/
 ---
 
-##Overview
+## Overview
 For my Senior Design project, our team was assigned to create a device related to IoT for the Cyber Defense Competition (CDC) at ISU. The main goal is to have one device completed by the 2021 Spring CDC. The device must have vulnerabilities commonly found in IoT devices such as cameras, locks, or smart plugs. The overall goal is to have a robust device that can be changed in future CDCs and be able to be just 'dropped in'.
 
 ### My Role
