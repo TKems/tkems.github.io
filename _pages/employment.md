@@ -11,6 +11,8 @@ Providing knowledgeable technical support along with infrastructure maintenance,
 - Windows Active Directory, MacOS, and Linux Administration
 - Drupal, WordPress, and native web site management
 - Staff and server infrastructure management, maintenance, and upgrades
+- Team leader for multiple teams and project manager for multiple projects
+- Worked with Cisco (ASA, Switches), VMWare (ESXi and vCenter), APC (UPS), and Dell (iDRAC) equipment
 
 
 ### Information Technology / Audio Visual Support

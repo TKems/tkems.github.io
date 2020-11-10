@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  DLink Movienite
-categories: [Projects,Hardware Hacking]
+categories: [Projects,Hardware Hacking,Personal Project]
 excerpt: The DLink Movienite streaming device has a serious hardware flaw that is exploited easily for root level access.
 ---
-
+## Overview
 The DLink Movienite streaming device is a small, black device that was released in 2012. It supports Netflix, Vudu, Pandora, and YouTube out of the box and is very easy to setup. It has Wi-fi, Ethernet, and HDMI on the rear of the unit. This may seem like a disappointment, however there is more available inside the device.  
 
 ![](/images/dlink-movienite.jpg)
@@ -26,4 +26,4 @@ After some more digging around in the file system, I found a vulnerability that 
 
 I am still working on this project and still trying to find some possible software based vulnerabilities within the firmware of the device.
 
-Stay tuned...
+Part 2 here!: [Part 2](https://www.trevorkems.com/dlink-movienite-part-2)

@@ -5,6 +5,9 @@ permalink: /about/
 ---
 My name is Trevor Kems and I am a Junior studying Cyber Security Engineering at Iowa State University.
 
+## Objectives
+I have a deep love for Cyber Security and would love to work with hardware pentesting and/or physical infrastructure pentesting after I graduate from ISU in 2021.
+
 ## Contact
 You can reach me by email: trevorkems@gmail.com
 Please include your request within the subject line, thanks!
