@@ -9,6 +9,10 @@ I was given the privilege to give a talk at the Information Student Assurance St
 
 Some of the projects listed in the presentation are not currently on my website for one or many reasons. I hope to go into more detail as soon as possible, so stay tuned!
 
+IASG Post:
+
+[Post](https://iasg.iac.iastate.edu/meetings/2020/03/02/meeting.html)
+
 Slides:
 
 [IASG Slides](https://docs.google.com/presentation/d/1jYWCZxqzzmHtuGNaBcyEppj0qsGm9e7zhW9ThNL43HU/edit?usp=sharing)
