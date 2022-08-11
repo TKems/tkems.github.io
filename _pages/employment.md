@@ -5,9 +5,16 @@ permalink: /employment/
 ---
 ## Experience
 
+### Penetration Tester
+Pratum - Ankeny, IA - August 2021 - Present
+Providing penetration testing, vulnerability scanning, and social engineering.
+- Burp Suite Professional, Kali Linux
+- Web application, internal, and external penetration testing
+
+
 ### Technical Support Specialist
-Krell Institute - Ames, IA – May 2018 - Present
-Providing knowledgeable technical support along with infrastructure maintenance, security audits, and system administration.
+Krell Institute - Ames, IA – May 2018 - August 2021
+Provided knowledgeable technical support along with infrastructure maintenance, security audits, and system administration.
 - Windows Active Directory, MacOS, and Linux Administration
 - Drupal, WordPress, and native web site management
 - Staff and server infrastructure management, maintenance, and upgrades

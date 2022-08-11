@@ -3,13 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
-My name is Trevor Kems and I am a Junior studying Cyber Security Engineering at Iowa State University.
+My name is Trevor Kems and I am a Penetration Tester at Pratum. I enjoy reverse engineering IoT devices and restoring vintage computers in my free time.
 
-## Objectives
-I have a deep love for Cyber Security and would love to work with hardware pentesting and/or physical infrastructure pentesting after I graduate from ISU in 2021.
+## Certifications
+Offsensive Security Certified Professional (OSCP) - August 2nd, 2022
 
 ## Contact
-You can reach me by email: trevorkems@gmail.com
+You can reach me by email: trevorkems (at) gmail.com
 Please include your request within the subject line, thanks!
 
 
@@ -19,9 +19,13 @@ Please include your request within the subject line, thanks!
 - Hardware Hacking
 - Physical Security
 - Locksport
+- Social Engineering
 
 ## Experience
 
+- Burp Suite Professional
+- Kali Linux (Default tools)
+- AD Pentesting
 - Windows Active Directory and Administration
 - Linux and macOS Administration
 - Drupal
@@ -32,6 +36,7 @@ Please include your request within the subject line, thanks!
 
 ## Languages
 
+- Python
 - PHP
 - C
 - Java
