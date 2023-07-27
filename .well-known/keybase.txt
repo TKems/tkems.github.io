@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/tkems
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://trevorkems.com
+  * I am tkems (https://keybase.io/tkems) on keybase.
+  * I have a public key ASAzBMJtjNPQMKQDLXGF7iA5lxYBogLrj8xuhcG-3KLSgAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203304c26d8cd3d030a4032d7185ee2039971601a202eb8fcc6e85c1bedca2d2800a",
+      "host": "keybase.io",
+      "kid": "01203304c26d8cd3d030a4032d7185ee2039971601a202eb8fcc6e85c1bedca2d2800a",
+      "uid": "db4c22ea26d46fffe79b8399a51f3119",
+      "username": "tkems"
+    },
+    "merkle_root": {
+      "ctime": 1690417274,
+      "hash": "6022d040cab76592b7fe1f9888619944250843acf1ae3516b6a6aa062fc6b9d005197a8457f7d9d26344a7b978223d7c206f6e6906e16e0d7705a8e2de70bdd2",
+      "hash_meta": "4d7c3692ffd92f6fb48c90e0700ce18423102ae651a9ba1e5f1f3386acc7abc3",
+      "seqno": 24734914
+    },
+    "service": {
+      "entropy": "AhEPq5fvv8ZjDJ5ihIS3TKqW",
+      "hostname": "trevorkems.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.1"
+  },
+  "ctime": 1690417286,
+  "expire_in": 504576000,
+  "prev": "b0e5cb5718b73468bfd19a882694a2f77f3d5c73f7dd75d17966530ce8b10e13",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgMwTCbYzT0DCkAy1xhe4gOZcWAaIC64/MboXBvtyi0oAKp3BheWxvYWTESpcCCMQgsOXLVxi3NGi/0ZqIJpSi9389XHP33XXReWZTDOixDhPEIBBWMW1WRjCVvRf3+Bbv/4k3wl+kwVbFFZpYS/jHLsOaAgHCo3NpZ8RAIRUSsTU1b5HH/J7MDoopqnGLMMTyPe8M2Z5N/gwM7d02Z5iuPEfEyZKuHZizY9tHlxxdy8lk4JLv3PQtwBHIAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILKpsdLruev+8FTrgMKeiwXBZgoXq7I+K76VBOtwPXKNo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tkems
+
+==================================================================
