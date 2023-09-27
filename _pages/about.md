@@ -29,6 +29,7 @@ Please include your request within the subject line, thank you!
 - Burp Suite Professional
 - Kali Linux (Default tools)
 - AD Pentesting (ADCS, Kerberos, GPO)
+- Passwording Cracking
 - Windows Active Directory and Administration
 - Linux and macOS Administration
 - Wordpress, Drupal, and custom PHP
