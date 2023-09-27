@@ -6,10 +6,19 @@ permalink: /employment/
 ## Experience
 
 ### Penetration Tester
-Pratum - Ankeny, IA - August 2021 - Present
+Waterleaf International - Remote - April 2023 - Present
 Providing penetration testing, vulnerability scanning, and social engineering.
 - Burp Suite Professional, Kali Linux
 - Web application, internal, and external penetration testing
+- Reverse engineering (x86, ARM, MIPS)
+- Cryptanalysis
+
+### Penetration Tester
+Pratum/HBS - Ankeny, IA - August 2021 - March 2023
+Provided external, internal, and web app penetration testing, vulnerability scanning, and social engineering.
+- Burp Suite Professional, Kali Linux
+- Web application, internal, and external penetration testing
+- Social engineering including email, vishing, and physical security testing
 
 
 ### Technical Support Specialist
