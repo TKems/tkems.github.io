@@ -9,8 +9,8 @@ permalink: /projects/
 
 ## Past Projects
 
-- Garage Door Opener RF Hacking
-- ViewState Decoder Chrome Extension
+- [Garage Door Opener RF Hacking](https://www.youtube.com/watch?v=Ghz4p4S9VEA)
+- [ViewState Decoder Chrome Extension](https://github.com/TKems/Viewstate-Decoder-Extension)
 - [Dlink Movienite Streaming Box PT. 1](https://www.trevorkems.com/dlink-movienite)
 - [Dlink Movienite Streaming Box PT. 2](https://www.trevorkems.com/dlink-movienite-part-2)
 - [CPR E 186: LEDs and Sound](https://www.trevorkems.com/cpre-186)
