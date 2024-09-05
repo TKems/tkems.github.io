@@ -37,6 +37,8 @@ Because I used a raw flash dump of the firmware and not a firmware update file, 
 
 I began the process of exploring the system files. I mainly just randomly poke around the firmware in places I think would be interesting. /etc/ is a good place to start, along with /bin/, /usr/, and /var/. Vendors put binaries and config files in lots of different places. I noticed that /etc/passwd contained a salted password hash that I noted down to attempt to crack with Hashcat. I also noticed a large amount of references to the company Anyka and Nooie. Anyka is the SoC manufacture and Nooie sells similar IoT cameras (more about them later). After some poking around in /etc/, I found several start-up scripts that launched the anyka_ipc binary. Another hint that this was the main binary was the size, at 1.9MB, it must have something interesting inside. I then decided to launch Hashcat while I loaded up the anyka_ipc binary in Ghidra and was surprised when I got a hit after only 20 seconds!
 
+![](/images/victure-iot/hashcat-cracked-password.png)
+
 ## CVE-2023-41610
 ### Use of hardcoded root password
 
