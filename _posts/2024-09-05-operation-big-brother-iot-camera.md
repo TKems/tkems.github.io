@@ -13,6 +13,8 @@ I found my Victure PC420 Baby Monitor (Wi-Fi Camera) while out thrifting and bro
 
 The camera is a basic design with an adjustable base holding up the camera body. The design is similar to the [Nest Dropcam](https://www.ifixit.com/Device/Nest_Dropcam_Pro) but I have seen many similar designs in other similarly priced IoT cameras. There is a micro-SD card slot on the side and a USB micro-B port on the back for power. It seems that the camera also has some IR LEDs, a microphone, and speaker. A recessed reset button is also on the back next to the speaker.
 
+The firmware version of my camera was 1.1.39
+
 # Hardware Teardown
 
 After some failed attempts at getting into the plastic shell of the device from the bottom, I found that several small plastic clips held the two halves together. With enough force, they did pop out of place and the mainboard of the camera was attached to the front section. I disconnected the speaker cable and began the process of removing the internals to get a look at the mainboard and any secrets that it may hold.
@@ -191,6 +193,8 @@ Overall, Victure has been accepting of my report and asked several clarifying qu
 
 # Fixes
 Of the vulnerabilities identified, I found that the SD Card and hardcoded root password issues were fixed within an updated firmware file provided to me by Victure. I found that the video data was not encrypted on the new firmware along with the ProtoBuf data also using the same encryption method and key structure.
+
+The new firmware version that was provided to me that fixed CVE-2023-41610 and CVE-2023-41612 was version 4.4.14.
 
 
 # Protection of Sensitive Information
