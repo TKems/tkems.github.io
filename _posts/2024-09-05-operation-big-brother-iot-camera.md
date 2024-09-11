@@ -5,6 +5,10 @@ categories: [Projects,IoT,Cameras,CVE,Exploits,Vulnerabilities,Talks]
 excerpt: How secure are some IoT cameras? Not very! From hardware issues to missing encryption, we will go over flaws in popular IoT cameras sold by one manufacturer.
 ---
 
+# Presentation
+I gave a presentation based on this work at the September 2024 SecDSM meeting. A recording of which can be found here: [https://www.youtube.com/watch?v=HnuIjPVKBew](https://www.youtube.com/watch?v=HnuIjPVKBew)
+
+
 # Intro
 
 <img src="/images/victure-iot/victure-camera.png" width="450" height="600">
