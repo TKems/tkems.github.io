@@ -1,0 +1,8 @@
+- title: Enterprise offensive security
+  description: Internal and external penetration testing, web applications, Active Directory, ADCS, Kerberos, and social engineering.
+- title: Vulnerability research
+  description: Binary analysis, vulnerability discovery, proprietary protocols, cryptography implementation review, and coordinated disclosure.
+- title: Embedded & IoT security
+  description: Firmware extraction, SPI and serial interfaces, embedded Linux, ARM and MIPS reverse engineering, mobile applications, and RF.
+- title: Security tooling
+  description: Purpose-built utilities in Python, PowerShell, and C, with Ghidra, Burp Suite, Wireshark, and SDR tools for investigation.

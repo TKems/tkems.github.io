@@ -1,0 +1,14 @@
+{% assign item = include.item %}
+<article class="research-card{% if item.id == 'big-brother' %} research-card-featured{% endif %}" id="{{ item.id }}">
+  {% if item.image %}
+  <div class="research-image"><img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="800" height="600" loading="lazy"></div>
+  {% endif %}
+  <div class="card-body">
+    <p class="eyebrow">{{ item.subtitle }}{% if include.show_year %} <span class="research-year">/ {{ item.year }}</span>{% endif %}</p>
+    <h{{ include.heading | default: 3 }}>{{ item.title }}</h{{ include.heading | default: 3 }}>
+    {% if item.cves %}<ul class="cves" aria-label="Published CVEs">{% for cve in item.cves %}<li>{{ cve }}</li>{% endfor %}</ul>{% endif %}
+    <p>{{ item.description }}</p>
+    <ul class="tags" aria-label="Research areas">{% for tag in item.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+    <div class="card-links">{% for link in item.links %}<a href="{{ link.url | relative_url }}">{{ link.label }} <span aria-hidden="true">&rarr;</span></a>{% endfor %}</div>
+  </div>
+</article>

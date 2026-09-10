@@ -12,11 +12,11 @@ Once you have access to a serial port on a device, sometimes there can be progra
 
 On the Movienite, in the /etc/ directory we find the inetd.conf file that configures the inetd service. However it seems like inetd isn't started on boot. To start it, just run the inetd command without any arguments. In the case of the Movienite, since the inetd config file starts the telnetd service, we can then connect over telnet to the device.
 
-![](/images/telnet-command.png)
+<!-- Original screenshot missing from the repository: /images/telnet-command.png. Restore here when recovered. -->
 
 After telnet is established, we can use it to poke around the file system a bit more without debug message interrupting our commands.
 
-![](/images/dlink-movienite-2.jpg)
+![Serial interface wiring on the DLink Movienite board](/images/dlink-movienite-2.jpg)
 
 
 Overall, this allows an attacker with physical access to the device to compromise user information. My next step is to find if this device has any remote vulnerabilities that an attacker could take advantage of.

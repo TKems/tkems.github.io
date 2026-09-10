@@ -2,6 +2,7 @@
 layout: page
 title: Senior Design
 permalink: /seniordesign/
+description: An earlier Iowa State senior design project creating a vulnerable IoT device for the Cyber Defense Competition.
 ---
 
 ## Overview

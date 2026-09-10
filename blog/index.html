@@ -1,0 +1,25 @@
+---
+layout: page
+title: Blog
+description: Technical field notes from Trevor Kems on hardware, firmware reverse engineering, IoT security, and independent projects.
+eyebrow: Field notes
+intro: Long-form investigations, experiments, and notes from the workbench.
+---
+<div class="blog-tools"><a href="{{ '/research/' | relative_url }}">Selected research</a><a href="{{ '/categories/' | relative_url }}">Browse topics</a><a href="{{ '/search/' | relative_url }}">Search</a><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></div>
+<div class="posts">
+{% for post in paginator.posts %}
+  <article class="blog-entry">
+    <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %e, %Y' }}</time></p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html }}</p>
+    <a href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">&rarr;</span></a>
+  </article>
+{% endfor %}
+</div>
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Blog pagination">
+  {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer posts</a>{% endif %}
+  <span aria-current="page">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Older posts &rarr;</a>{% endif %}
+</nav>
+{% endif %}

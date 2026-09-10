@@ -1,39 +1,20 @@
 ---
 layout: default
 ---
-
-<article class="post detailed">
-  <h1>{{ page.title }}</h1>
-
-  <div>
-    <p class="author_title">{{site.author}}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
-    {% if page.last_modified_at %}
-    <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
-    {% endif %}
-    <div class="post-tags">
-      {% if post %}
-        {% assign categories = post.categories %}
-      {% else %}
-        {% assign categories = page.categories %}
-      {% endif %}
-      {% for category in categories %}
-        <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
-    </div>
-  </div>
-    
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div>
-    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
-  </div>
-
-  <!--<div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>-->
-
+<article class="post prose">
+  <header class="page-header">
+    <a class="eyebrow" href="{{ '/blog/' | relative_url }}">Field notes / Blog</a>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">{{ site.author }} &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %e, %Y' }}</time>{% if page.last_modified_at %} &middot; Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%B %e, %Y' }}</time>{% endif %}</p>
+    <ul class="tags" aria-label="Categories">
+      {% assign post_categories = page.categories | join: '|' | split: '|' | uniq %}
+      {% for category in post_categories %}<li><a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category }}</a></li>{% endfor %}
+    </ul>
+  </header>
+  <div class="entry">{{ content }}</div>
+  <aside class="article-end" aria-label="Explore more">
+    <p>More work from the enterprise network to the circuit board.</p>
+    <a href="{{ '/research/' | relative_url }}">Explore research &rarr;</a> &nbsp; <a href="{{ '/blog/' | relative_url }}">All articles &rarr;</a>
+  </aside>
   {% include disqus.html %}
 </article>

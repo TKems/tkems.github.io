@@ -1,113 +1,78 @@
-<h1 align="center">
-  <br>
-  <img src="/images/reverie-text.png" alt="Reverie" width="200"/>
-  <br>
-  <p align="center">
-  <a href="https://ko-fi.com/Y8Y2QC9Y"><img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" width="200"/></a>
-  </p>
-</h1>
+# Trevor Kems — professional portfolio
 
-Reverie is a [Jekyll](https://jekyllrb.com/)-powered theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for my blog.
+Jekyll portfolio and technical blog for [trevorkems.com](https://www.trevorkems.com), hosted on GitHub Pages. The original Reverie/Jekyll Now structure and MIT license are retained; the site uses local CSS, system fonts, and the existing search script.
 
-> [Theme demo](https://www.amitmerchant.com/reverie/introducing-reverie-jekyll-theme/)
+## Local development
 
-This is a plug-and-play Jekyll theme best suited to use on [GitHub Pages](https://pages.github.com) without even setting up a local environment.
+Use Ruby 3.3.4 (see `.ruby-version`) and Bundler. The Gemfile selects the GitHub Pages dependency set, including Jekyll 3.10 and the supported feed, sitemap, SEO, and pagination plugins.
 
-![](/images/reverie-demo.png)
+The Gemfile requires Ruby 3.3.x: the Pages dependency set used here does not support Ruby 4.0. The Windows build was verified with portable Ruby 3.3.4, without changing the installed Ruby 4.0.6. That local runtime and its build helper are in ignored `tmp/`; dependencies are in ignored `vendor/bundle/`.
 
-|  Responsiveness            |  Search | Categories |
-|---------------------|----------------------|----------------------|
-|![Responsiveness](/images/mobile-demo.png) | ![search](/images/search.png) | ![categories](/images/categories.png) |
-
-## Features overview
-
-- Clean and minimal design
-- Single column post layout
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies come built-in
-- Markdown blogging
-- Supports [Pullquotes](https://en.wikipedia.org/wiki/Pull_quote)
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Social media icons
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Blog with pagination
-- Categorize posts out-of-the box
-- RSS Feed
-- Built-in sitemap
-
-> <p><i>Like this theme?</i> Become a patreon to support my open source work <p>
-> <a href="https://www.patreon.com/amitmerchant"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
-
-## Using Reverie on GitHub Pages
-
-### 1. Fork Reverie to your User Repository
-
-Fork this repository, then rename the repository to `yourgithubusername.github.io`.
-
-Alternatively, you can click the [`Use this template`](https://github.com/amitmerchant1990/reverie/generate) button if you want to create a repository with a clean commit history which will use Reverie as a template.
-
-Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2).
-
-### 2. Customize and view your site
-
-Enter your site name, description, avatar and many other options by editing the `_config.yml` file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here.
-
-Making a change to `_config.yml` (or any file in your repository) will force GitHub Pages to rebuild your site with Jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon.
-
-### 3. Publish your first blog post
-
-Create a new file called `/_posts/2019-2-13-Hello-World.md` to publish your first blog post. That's all you need to do to publish your first blog post! This [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) might come in handy while writing the posts.
-
-> You can add additional posts in the browser on GitHub.com too! Just hit the <kbd>Create new file</kbd> button in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
-
-## Using Categories in Reverie
-
-You can categorize your content based on `categories` in Reverie. For this, you just need to add `categories` in front matter like below:
-
-For adding single category:
-
-```md
-categories: JavaScript
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-For adding multiple categories:
+For production validation:
 
-```md
-categories: [PHP, Laravel]
+```sh
+JEKYLL_ENV=production bundle exec jekyll build --trace
+python3 scripts/verify_site.py
 ```
 
-The categorized content can be shown over this URL: <https://yourgithubusername.github.io/categories/>
+In PowerShell, set `$env:JEKYLL_ENV = 'production'`, then run the build and `python scripts/verify_site.py`.
 
-## Pagination
+The validation script requires only Python's standard library and checks the **actual Jekyll output**. It protects the original post URLs, internal links and anchors, canonical tags, basic HTML accessibility, feed, sitemap, search index, and CNAME. The GitHub Actions workflow in `.github/workflows/validate.yml` runs these checks on pushes and pull requests. It does not deploy or change the existing GitHub Pages publishing configuration.
 
-Pagination of posts in Reverie works out-of-the-box. You only need to specify the number of posts you want on a single page in `_config.yml` and Reverie will take care of the rest.
+## Content maintenance
 
-```yml
-paginate: 6
-```
+- `index.html`: portfolio homepage.
+- `_data/research.yml`: selected research and source links, shared by the homepage and Research page.
+- `_data/projects.yml`: tools and labs; earlier student work is linked separately on Projects.
+- `_data/talks.yml`: presentations, event dates, recordings, and slides.
+- `_data/experience.yml`: employment history used by the Experience page.
+- `_data/navigation.yml`: primary navigation.
+- `_data/focus.yml`: homepage focus areas.
+- `_pages/`: portfolio pages and compatibility redirects.
+- `_posts/`: original long-form articles.
+- `_includes/` and `_layouts/`: reusable markup and SEO integration.
+- `assets/style.scss`: responsive design; `_sass/_darcula.scss` supplies the existing syntax colors.
 
-## RSS
+Research summaries are grounded in the original articles and these public repositories:
 
-The generated [RSS feed](https://en.wikipedia.org/wiki/RSS) of your blog can be found at <https://yourgithubusername.github.io/feed>. You can see the example RSS feed over [here](https://www.amitmerchant.com/reverie/feed.xml).
+- [Victure camera research and decoder](https://github.com/TKems/Victure-Camera-Vulnerabilities)
+- [Damn-Vulnerable-ADCS](https://github.com/TKems/Damn-Vulnerable-ADCS)
+- [LockBit decryptor breakdown](https://github.com/TKems/LockBit-Decryptor-Breakdown)
+- [Garage-door RF research](https://github.com/TKems/Garage-Door-Hacking)
+- [ViewState Decoder](https://github.com/TKems/Viewstate-Decoder-Extension)
+- [Competition tooling](https://github.com/TKems/campfire)
 
-## Sitemap
+The ADCS lab is described as supporting NTLM relay testing; the README does not claim template-vulnerability coverage. The LockBit analysis concerns the recovery tool's decryption-ID checker. No malware-decryption breakthrough or recovered victim data is claimed.
 
-The generated sitemap of your blog can be found at <https://yourgithubusername.github.io/sitemap>. You can see the example sitemap feed over [here](https://www.amitmerchant.com/reverie/sitemap).
+Trevor confirmed the current Waterleaf title as **Senior Penetration Tester** during this update. April 2023 remains the company start date; no promotion date was supplied.
 
-## Emailware
-Reverie is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this theme or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+## Privacy and contact
 
-## The name?
+No resume or resume PDF is published. The former `/resume/` URL redirects to the privacy-safe Experience page and is excluded from the sitemap. Public contact email is `contact@tkems.io`, routed separately from Trevor's personal email.
 
-reverie - _a state of being pleasantly lost in one's thoughts; a daydream._<br><sup>/ˈrɛv(ə)ri/</sup> 
+## URLs and deployment
 
+Do not change `permalink: /:title/`, post filenames, or post slugs without explicit redirects. The seven original post URLs remain the reference set in `scripts/verify_site.py`.
 
-## License
+The chronological archive now lives at `/blog/`, with six posts per page and `/blog/page:num/` pagination. Keep `blog/index.html` as HTML **without a permalink in front matter**, as required by jekyll-paginate.
 
-MIT
+The original site had seven posts and therefore only one additional archive page: `/page2/`. Its static redirect points to `/blog/page2/`, is excluded from the sitemap, and canonicalizes to the destination. `/employment/` and `/resume/` similarly redirect to `/experience/`. These are HTML redirects suitable for branch-based GitHub Pages, not HTTP 301 responses.
+
+`CNAME` remains `www.trevorkems.com` and is now included in the generated site. HTTPS is set in `_config.yml`. Feed and sitemap remain at `/feed.xml` and `/sitemap.xml`. SEO tags come from jekyll-seo-tag; avoid adding duplicate titles, canonicals, or OpenGraph tags. The existing portrait supplies the default social image, with a research image override for Operation Big Brother.
+
+## Remaining assets and verification
+
+- Add a verified Splunk .conf recording/slides link when available.
+- The old DLink follow-up referenced `/images/telnet-command.png`, which was already absent. Its reference is retained in an HTML comment for restoration, removing the broken image request. The first DLink article also already had a commented-out missing `dlink-movienite-3.jpg` reference.
+- A dedicated social card and optimized portrait variants can be added later.
+
+**Production Jekyll build passed on Windows**, using Ruby 3.3.4, Jekyll 3.10.0, and github-pages 232. The Windows compiler needed C17 mode for several native gem extensions; no dependency source patches were required. The build emits a non-fatal Faraday retry-middleware advisory from the dependency stack.
+
+The actual generated output passes `scripts/verify_site.py`, covering all seven original post URLs, internal links and anchors, six-plus-one post pagination, redirects, privacy checks, headings, image alt text, canonicals, metadata, feed, sitemap, search, and CNAME.
+
+Edge checks against the actual Jekyll output covered desktop and mobile layouts, with no horizontal overflow or broken images. Search, keyboard skip navigation, redirects, and reduced-motion media were also checked.

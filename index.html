@@ -1,49 +1,54 @@
 ---
 layout: default
+title: Offensive Security Engineer & Security Researcher
+description: Trevor Kems — offensive security, vulnerability research, Active Directory and ADCS, firmware reverse engineering, and embedded security. Remote U.S. / Central Iowa.
 ---
-
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ relative_url }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
-
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-        </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ relative_url }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">Enterprise networks. Embedded systems. Everything between.</p>
+    <h1 id="hero-title">Trevor Kems<span>Offensive Security Engineer<br>&amp; Security Researcher</span></h1>
+    <p class="hero-statement">I break systems to understand how they fail.</p>
+    <p class="hero-description">I specialize in penetration testing, vulnerability research, firmware and binary reverse engineering, Active Directory security, and embedded/IoT devices. My work spans enterprise environments, hardware, radio protocols, mobile applications, and custom embedded systems.</p>
+    <ul class="credibility" aria-label="Professional highlights"><li><a href="{{ site.oscp_credential }}">OSCP</a></li><li>3 Published CVEs</li><li>Splunk .conf Speaker</li></ul>
+    <div class="button-group">
+      <a class="button button-primary" href="{{ '/research/' | relative_url }}">View Research <span aria-hidden="true">&rarr;</span></a>
+      <a class="button button-outline" href="{{ '/experience/' | relative_url }}">Experience</a>
+      <a class="hero-link" href="https://github.com/TKems">GitHub</a>
+      <a class="hero-link" href="mailto:{{ site.footer-links.email }}">Contact</a>
+    </div>
   </div>
-  {% endif %}
-</div>
+  <aside class="hero-note" aria-label="Professional interests">
+    <p><strong>Professional interests</strong>Senior offensive security, product security, vulnerability research, and security research.</p>
+    <span>Remote U.S. / Central Iowa</span>
+  </aside>
+</section>
+
+<section class="section" aria-labelledby="research-heading">
+  <div class="section-header"><div><p class="eyebrow">Selected work</p><h2 id="research-heading">Featured research.</h2></div><a href="{{ '/research/' | relative_url }}">All research <span aria-hidden="true">&rarr;</span></a></div>
+  <p class="section-intro">From a camera's flash chip to the trust relationships in Active Directory. Detailed writeups, source code, and talks behind the work.</p>
+  <div class="research-grid">
+    {% assign featured = site.data.research | where: 'featured', true %}
+    {% for item in featured %}{% include research-card.html item=item %}{% endfor %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="focus-heading">
+  <div class="section-header"><div><p class="eyebrow">Areas of focus</p><h2 id="focus-heading">Across layers of a system.</h2></div></div>
+  <div class="focus-grid">{% for focus in site.data.focus %}<div class="focus-card"><span class="index-mark" aria-hidden="true">0{{ forloop.index }}</span><h3>{{ focus.title }}</h3><p>{{ focus.description }}</p></div>{% endfor %}</div>
+</section>
+
+<section class="section speaking-preview" aria-labelledby="speaking-heading">
+  <div><p class="eyebrow">Speaking &amp; community</p><h2 id="speaking-heading">Making the technical<br>work understandable.</h2><p>I share practical investigations into ADCS, IoT cameras, RF, RFID, and hardware reverse engineering.</p><a href="{{ '/talks/' | relative_url }}">Explore all talks <span aria-hidden="true">&rarr;</span></a></div>
+  <div class="speaking-highlights">
+    <article><p class="meta">Splunk .conf / 2024</p><h3>Protecting ADCS with Splunk</h3><p>Detecting common attacks and enabling certificate authority logging.</p></article>
+    <article><p class="meta">SecDSM / 2024</p><h3>Operation Big Brother</h3><p>Taking an IoT camera apart, from firmware to network protocols.</p><a href="https://www.youtube.com/watch?v=HnuIjPVKBew">Watch the presentation <span aria-hidden="true">&rarr;</span></a></article>
+    <p class="community-line">Also presented at Secure Iowa, BSides Iowa, and Iowa State University.</p>
+  </div>
+</section>
+
+<section class="section about-preview" aria-labelledby="about-heading">
+  <img src="{{ site.avatar | relative_url }}" alt="Trevor Kems" width="160" height="160" loading="lazy">
+  <div><p class="eyebrow">Beyond the engagement</p><h2 id="about-heading">Curiosity, with a soldering iron.</h2><p>I enjoy taking systems apart: in software, with a debugger, and sometimes literally with a soldering iron. Outside professional penetration testing, I investigate embedded devices, unusual hardware, and security problems that have received little attention.</p><p>I also restore vintage computers and build security projects for competitions and the security community.</p><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">&rarr;</span></a></div>
+</section>
+
+<section class="contact-strip" aria-labelledby="contact-heading"><div><h2 id="contact-heading">Let's talk technical security.</h2><p>For research conversations, speaking, and professional inquiries.</p></div><a class="button button-primary" href="mailto:{{ site.footer-links.email }}">Connect <span aria-hidden="true">&rarr;</span></a></section>

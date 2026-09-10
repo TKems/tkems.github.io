@@ -1,56 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    {% seo title=false %}
     {% include meta.html %}
-
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/style.css' | relative_url }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ '/feed.xml' | relative_url }}" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-
-    <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/ico" sizes="16x16" href="{{ 'images/favicon.ico' | relative_url }}">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+    {% feed_meta %}
+    <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    {% if page.url == '/' %}{% include person.html %}{% endif %}
   </head>
-
   <body>
-    <div id="bar"></div>
-    <div class="wrapper-container">
-      <div class="wrapper-masthead">
-        <div class="container">
-          <header class="masthead clearfix">
-            <a href="{{ '/' | relative_url }}" class="site-avatar"><img src="{{ relative_url }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
-
-            <div class="site-info">
-              <h1 class="site-name"><a href="{{ '/' | relative_url }}">{{ site.name }}</a></h1>
-              <p class="site-description">{{ site.description }}</p>
-            </div>
-
-            <nav>
-              <a href="{{ '/' | relative_url }}">Home</a>
-              <a href="{{ '/projects' | relative_url }}">Projects</a>
-	      <a href="{{ '/talks' | relative_url }}">Talks</a>
-	      <a href="{{ '/about' | relative_url }}">About Me</a>
-            </nav>
-          </header>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-name" href="{{ '/' | relative_url }}"><span class="monogram" aria-hidden="true">TK</span> Trevor Kems</a>
+        <nav class="primary-nav" aria-label="Primary">
+          {% for item in site.data.navigation %}
+          <a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% endfor %}
+        </nav>
       </div>
-
-      <div class="wrapper-main">
-        <div id="main" role="main" class="container">
-          {{ content }}
-        </div>
+    </header>
+    <main id="main" class="container main-content" tabindex="-1">{{ content }}</main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div><strong>Trevor Kems</strong><p>Offensive Security Engineer &amp; Security Researcher<br>Remote U.S. / Central Iowa</p></div>
+        <nav class="footer-links" aria-label="Contact and resources">
+          <a href="mailto:{{ site.footer-links.email }}">Email</a>
+          <a href="https://github.com/TKems">GitHub</a>
+          <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}">LinkedIn</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+          <a href="{{ '/search/' | relative_url }}">Search</a>
+        </nav>
       </div>
-
-      <div class="wrapper-footer">
-        <div class="container">
-          <footer class="footer">
-            {% include svg-icons.html %}
-          </footer>
-        </div>
-      </div>
-    </div>
-
+    </footer>
     {% include analytics.html %}
   </body>
 </html>

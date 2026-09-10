@@ -2,23 +2,14 @@
 layout: page
 permalink: /categories/
 title: Categories
+description: Browse Trevor Kems' technical posts by research topic and project category.
 ---
-
-
 <div id="archives">
-{% for category in site.categories %}
-  <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-    
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.categories[category_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{% if post.title and post.title != "" %}{{post.title}}{% else %}{{post.excerpt |strip_html}}{%endif%}</a></h4>
-    </article>
-    {% endfor %}
-  </div>
+{% assign category_names = site.posts | map: 'categories' | join: '|' | split: '|' | uniq | sort %}
+{% for category_name in category_names %}
+  <section class="archive-group" id="{{ category_name | slugify }}">
+    <h2>{{ category_name }}</h2>
+    <ul>{% for post in site.posts %}{% assign post_categories = post.categories | join: '|' | split: '|' %}{% if post_categories contains category_name %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endif %}{% endfor %}</ul>
+  </section>
 {% endfor %}
 </div>

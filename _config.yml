@@ -4,12 +4,15 @@
 
 # Name of your site (displayed in the header)
 name: Trevor Kems
+title: Trevor Kems
+tagline: Offensive Security Engineer & Security Researcher
+lang: en_US
 
 # Name of the author
 author: Trevor Kems
 
 # Short bio or description (displayed in the header)
-description: Trevor Kems' personal site
+description: Offensive Security Engineer and Security Researcher specializing in penetration testing, vulnerability research, firmware reverse engineering, IoT security, and Active Directory security.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/tk-profile-picture.png
@@ -21,7 +24,7 @@ avatar: /images/tk-profile-picture.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: trevorkems@gmail.com
+  email: contact@tkems.io
   facebook:
   flickr:
   github: tkems
@@ -45,14 +48,33 @@ google_analytics: #
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
-url: http://www.trevorkems.com
+url: https://www.trevorkems.com
 enforce_ssl: https://www.trevorkems.com
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/"
+baseurl: ""
+
+social:
+  name: Trevor Kems
+  links:
+    - https://github.com/TKems
+    - https://www.linkedin.com/in/tkems
+
+oscp_credential: https://www.credential.net/6caf5e50-5e06-4b3a-9605-aa825cf1dd05#acc.SbEmW5ry
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/tk-profile-picture.png
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -75,7 +97,7 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :compressed
 
 # Use the following plug-ins
 plugins:
@@ -88,7 +110,7 @@ include: ['_pages']
 #include: [".well-known"]
 
 paginate: 6
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 
 # Exclude these files from your production _site
 exclude:
@@ -96,5 +118,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - CNAME
+  - scripts
+  - vendor
+  - tmp
 

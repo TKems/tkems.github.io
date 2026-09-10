@@ -1,0 +1,35 @@
+# Employment dates and scope retained from the original _pages/employment.md.
+# Current senior title confirmed by Trevor; promotion date not supplied.
+- role: Senior Penetration Tester
+  employer: Waterleaf International
+  location: Remote
+  dates: April 2023 – Present
+  description: With Waterleaf since April 2023, currently as a Senior Penetration Tester. Penetration testing, vulnerability assessment, and social engineering across web applications and internal and external networks.
+  responsibilities:
+    - Investigate application and network security weaknesses through penetration testing and vulnerability scanning.
+    - Reverse engineer x86, ARM, and MIPS binaries and examine cryptographic implementations.
+- role: Penetration Tester
+  employer: Pratum/HBS
+  location: Ankeny, Iowa
+  dates: August 2021 – March 2023
+  description: External, internal, and web application penetration testing, vulnerability scanning, and social engineering.
+  responsibilities:
+    - Assess web applications and enterprise networks for exploitable security weaknesses.
+    - Conduct social engineering through email, vishing, and physical security testing.
+- role: Technical Support Specialist
+  employer: Krell Institute
+  location: Ames, Iowa
+  dates: May 2018 – August 2021
+  description: Technical support, infrastructure maintenance, security audits, and systems administration.
+  responsibilities:
+    - Administer Windows Active Directory, macOS, and Linux systems and maintain web platforms.
+    - Maintain and upgrade server, virtualization, network, and power infrastructure.
+    - Lead teams and manage infrastructure projects.
+- role: Information Technology / Audio Visual Support
+  employer: Iowa State University, Memorial Union
+  location: Ames, Iowa
+  dates: September 2017 – May 2018
+  description: Technical and event support for customers, event staff, and university employees.
+  responsibilities:
+    - Support Windows environments with Active Directory, remote management, and PowerShell.
+    - Coordinate audiovisual setup and work with full-time staff on equipment and software upgrades.

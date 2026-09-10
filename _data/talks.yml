@@ -1,0 +1,72 @@
+# Baseline: original _pages/talks.md and the Operation Big Brother post.
+- title: Operation Big Brother
+  event: SecDSM
+  year: 2024
+  date: September 2024
+  topic: IoT vulnerability research
+  featured: true
+  description: Firmware, camera protocols, and the vulnerabilities uncovered in an inexpensive IoT camera.
+  video: https://www.youtube.com/watch?v=HnuIjPVKBew
+  article: /operation-big-brother-iot-camera/
+- title: Protecting ADCS with Splunk
+  event: Splunk .conf
+  year: 2024
+  date: "2024"
+  topic: ADCS detection
+  featured: true
+  description: Detecting common ADCS attacks with Splunk and enabling logging on a Microsoft certificate authority.
+  # TODO: Add the official recording/slides if Trevor supplies a verified link.
+- title: "Becoming a Keymaster: Active Directory Certificate Services (ADCS) Attacks"
+  event: SecDSM
+  year: 2024
+  date: February 1, 2024
+  topic: Enterprise offensive security
+  featured: true
+  description: Certificate fundamentals, common ADCS attack methods, and practical defenses.
+  video: https://www.youtube.com/watch?v=0q47zV6W6bM
+- title: "Hacking Garage Doors with RF: On a budget"
+  event: SecDSM
+  year: 2023
+  date: June 1, 2023
+  topic: RF & protocol security
+  featured: true
+  description: An introduction to garage-door RF security with accessible hardware and a closer look at common opener protocols.
+  video: https://www.youtube.com/watch?v=Ghz4p4S9VEA
+  slides: https://github.com/TKems/Garage-Door-Hacking/blob/main/SecDSM-Garage-Door-Hacking.pdf
+- title: RFID Hacking
+  event: Iowa State University / IASG
+  year: 2022
+  date: November 17, 2022
+  topic: RFID
+  description: An introduction to investigating RFID cards and the hardware and tools involved.
+  video: https://www.youtube.com/watch?v=zKOAywZqisc
+- title: What is Penetration Testing?
+  event: Iowa State University / CPR E 231
+  year: 2022
+  date: November 8, 2022
+  topic: Penetration testing
+  description: Guest lecture on the day-to-day work of a penetration tester and how students can prepare.
+  recording_note: Not recorded.
+- title: RFID Hacking
+  event: Secure Iowa
+  year: 2022
+  date: "2022"
+  topic: RFID
+  description: Hardware, tools, and applications for investigating RFID cards.
+  recording_note: Not recorded; the IASG RFID talk covers similar material.
+- title: "Garage Door Hacking: SecMinus"
+  event: BSides Iowa
+  year: 2022
+  date: "2022"
+  topic: RF & hardware
+  description: An introduction and demonstration of garage-door opener RF security.
+  recording_note: Not recorded; the SecDSM 2023 talk covers similar material.
+- title: Some Fun Projects
+  event: Iowa State University / IASG
+  year: 2020
+  date: March 3, 2020
+  topic: Hardware & firmware reverse engineering
+  description: Hardware investigation fundamentals and firmware reverse engineering through independent projects.
+  video: https://www.youtube.com/watch?v=r7A0l4D0ADY
+  slides: https://docs.google.com/presentation/d/1jYWCZxqzzmHtuGNaBcyEppj0qsGm9e7zhW9ThNL43HU/edit?usp=sharing
+  article: /IASG-presentation/

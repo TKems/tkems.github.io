@@ -1,0 +1,26 @@
+# Descriptions grounded in the linked repositories and existing project page.
+- title: Damn-Vulnerable-ADCS
+  type: Enterprise security lab
+  description: A PowerShell setup for an intentionally vulnerable ADCS server, built for NTLM relay testing and used in the ISU Cyber Defense Competition. For isolated lab environments.
+  tags: [ADCS, PowerShell, Lab]
+  url: https://github.com/TKems/Damn-Vulnerable-ADCS
+- title: Victure Wireshark decoder
+  type: Research tooling
+  description: A Lua dissector that extracts raw media data from camera network traffic. A companion to the Operation Big Brother investigation.
+  tags: [Wireshark, IoT, Protocol Analysis]
+  url: https://github.com/TKems/Victure-Camera-Vulnerabilities
+- title: ViewState Decoder
+  type: Web application tooling
+  description: A Chrome extension for detecting, highlighting, and decoding ViewState variables in a page's HTML.
+  tags: [Web Security, Browser Extension]
+  url: https://github.com/TKems/Viewstate-Decoder-Extension
+- title: Garage door protocol tools
+  type: Hardware & RF
+  description: Research notes and a Python implementation for decoding raw Security+ 2.0 transmissions, using the secplus library.
+  tags: [RF, Python, Hardware]
+  url: https://github.com/TKems/Garage-Door-Hacking
+- title: Campfire
+  type: Competition tooling
+  description: A collection of tools and scripts for the Iowa State University Cyber Defense Competition red team.
+  tags: [Security Tooling, Competition]
+  url: https://github.com/TKems/campfire

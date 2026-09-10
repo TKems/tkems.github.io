@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include meta.html %}
+  <title>{{ page.title | escape }} | {{ site.name }}</title>
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+</head>
+<body><main><h1>{{ page.title }}</h1><p>This page has moved. <a href="{{ page.redirect_to | relative_url }}">Continue to {{ page.destination_name }}.</a></p></main></body>
+</html>

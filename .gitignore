@@ -10,3 +10,6 @@ package.json
 *.gem
 *.gemspec
 .jekyll-cache
+vendor/
+tmp/
+__pycache__/

@@ -2,20 +2,20 @@
 layout: page
 title: Search
 permalink: /search/
+description: Search Trevor Kems' technical articles and project archive.
 ---
-
 <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search through the blog posts...">
-    <ul id="results-container"></ul>
+  <label for="search-input">Search articles by title or topic</label>
+  <input type="search" id="search-input" placeholder="Try firmware, IoT, or hardware…" autocomplete="off">
+  <ul id="results-container" aria-live="polite"></ul>
 </div>
-
-<script src="{{ site.baseurl }}/assets/simple-jekyll-search.min.js" type="text/javascript"></script>
-
+<noscript><p>Search requires JavaScript. You can also <a href="{{ '/categories/' | relative_url }}">browse by category</a> or visit the <a href="{{ '/blog/' | relative_url }}">blog archive</a>.</p></noscript>
+<script src="{{ '/assets/simple-jekyll-search.min.js' | relative_url }}"></script>
 <script>
-    SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    searchResultTemplate: '<div style="text-align: left !important;"><a href="{url}"><h1 style="text-align:left !important;">{title}</h1></a><span style="text-align:left !important;">{date}</span></div>',
-    json: '{{ site.baseurl }}/search.json'
-    });
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<li><h2><a href="{url}">{title}</a></h2><span class="meta">{date}</span></li>',
+  json: '{{ "/search.json" | relative_url }}'
+});
 </script>

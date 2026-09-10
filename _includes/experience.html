@@ -1,0 +1,8 @@
+{% for job in site.data.experience %}
+<article class="experience-entry">
+  <div class="experience-date">{{ job.dates }}<span>{{ job.location }}</span></div>
+  <div><h{{ include.heading | default: 2 }}>{{ job.role }}</h{{ include.heading | default: 2 }}><p class="employer">{{ job.employer }}</p><p>{{ job.description }}</p>
+    {% unless include.compact %}<ul>{% for responsibility in job.responsibilities %}<li>{{ responsibility }}</li>{% endfor %}</ul>{% endunless %}
+  </div>
+</article>
+{% endfor %}

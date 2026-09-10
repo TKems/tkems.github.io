@@ -1,0 +1,11 @@
+<article class="speaking-entry">
+  <div class="talk-date"><span>{{ include.talk.event }}</span><span class="talk-date-value">{{ include.talk.date }}</span></div>
+  <div><p class="eyebrow">{{ include.talk.topic }}</p><h3>{{ include.talk.title }}</h3><p>{{ include.talk.description }}</p>
+    <div class="card-links">
+      {% if include.talk.video %}<a href="{{ include.talk.video }}">Watch video <span aria-hidden="true">&rarr;</span></a>{% endif %}
+      {% if include.talk.slides %}<a href="{{ include.talk.slides }}">View slides <span aria-hidden="true">&rarr;</span></a>{% endif %}
+      {% if include.talk.article %}<a href="{{ include.talk.article | relative_url }}">Read the writeup <span aria-hidden="true">&rarr;</span></a>{% endif %}
+    </div>
+    {% if include.talk.recording_note %}<p class="meta">{{ include.talk.recording_note }}</p>{% endif %}
+  </div>
+</article>

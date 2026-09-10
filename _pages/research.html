@@ -1,0 +1,13 @@
+---
+layout: page
+title: Research
+permalink: /research/
+description: Vulnerability research by Trevor Kems, including three published IoT camera CVEs, ADCS security, LockBit decryptor analysis, and RF protocols.
+eyebrow: Investigation / Analysis / Disclosure
+intro: From the circuit board to the enterprise network. The findings, methods, and tools behind my security research.
+wide: true
+---
+<div class="research-grid">
+{% for item in site.data.research %}{% include research-card.html item=item show_year=true heading=2 %}{% endfor %}
+</div>
+<aside class="article-end"><h2>Go deeper</h2><p>The <a href="{{ '/blog/' | relative_url }}">blog</a> preserves the full technical writeups. Find reusable tools and lab environments in <a href="{{ '/projects/' | relative_url }}">Projects</a>, or follow the work on <a href="https://github.com/TKems">GitHub</a>.</p></aside>

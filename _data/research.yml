@@ -1,0 +1,63 @@
+# Sources: existing posts and each linked repository README, reviewed 2026-09-09.
+- id: big-brother
+  title: Operation Big Brother
+  subtitle: IoT camera vulnerability research
+  year: 2024
+  featured: true
+  description: "From an SPI flash dump to proprietary network protocols: firmware and binary analysis of the Victure PC420 uncovered a hardcoded root password, weak encryption, and code execution from micro-SD media. The work includes a Wireshark decoder and coordinated disclosure."
+  image: /images/victure-iot/victure-pcb-front.jpg
+  image_alt: Victure PC420 circuit board exposed during the camera teardown
+  tags: [Vulnerability Research, Firmware, IoT, Protocol Analysis]
+  cves: [CVE-2023-41610, CVE-2023-41611, CVE-2023-41612]
+  links:
+    - label: Read the full research
+      url: /operation-big-brother-iot-camera/
+    - label: Wireshark decoder
+      url: https://github.com/TKems/Victure-Camera-Vulnerabilities
+    - label: Watch the talk
+      url: https://www.youtube.com/watch?v=HnuIjPVKBew
+- id: adcs
+  title: Active Directory Certificate Services
+  subtitle: Attacks, detection & a vulnerable lab
+  year: 2024
+  featured: true
+  description: "Exploring ADCS attack methods and defenses through talks and Damn-Vulnerable-ADCS, a PowerShell lab setup for testing NTLM relay vulnerabilities. Used in Iowa State University's Cyber Defense Competition."
+  tags: [Active Directory, ADCS, PowerShell]
+  links:
+    - label: View the ADCS lab
+      url: https://github.com/TKems/Damn-Vulnerable-ADCS
+    - label: Watch the talk
+      url: https://www.youtube.com/watch?v=0q47zV6W6bM
+- id: lockbit
+  title: LockBit 3.0 decryptor breakdown
+  subtitle: Binary reverse engineering
+  year: 2024
+  featured: true
+  description: "Reverse engineering the recovery tool's decryption-ID checker with Ghidra: unpacking Nuitka output and tracing how SHA-256 hashes are compared against a lookup table."
+  tags: [Reverse Engineering, Ghidra, Python]
+  links:
+    - label: Read the analysis
+      url: https://github.com/TKems/LockBit-Decryptor-Breakdown
+- id: garage-door
+  title: Garage door RF security
+  subtitle: Hardware & radio protocols
+  year: 2023
+  featured: true
+  description: "Investigating garage-door radio protocols with accessible hardware. Research notes, a Python implementation for decoding Security+ 2.0 transmissions, and a practical walkthrough presented at SecDSM."
+  tags: [RF, Hardware, Protocol Analysis]
+  links:
+    - label: View research & source
+      url: https://github.com/TKems/Garage-Door-Hacking
+    - label: Watch the talk
+      url: https://www.youtube.com/watch?v=Ghz4p4S9VEA
+- id: movienite
+  title: DLink Movienite
+  subtitle: Embedded hardware exploration
+  year: 2020
+  description: "Finding an exposed serial interface, gaining a root shell, and exploring the embedded Linux filesystem of a streaming device. A two-part hardware investigation."
+  tags: [Hardware, Embedded Linux, UART]
+  links:
+    - label: Read part one
+      url: /dlink-movienite/
+    - label: Read part two
+      url: /dlink-movienite-part-2/
